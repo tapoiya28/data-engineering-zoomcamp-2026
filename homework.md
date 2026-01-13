@@ -1,6 +1,6 @@
 **Q1**
-  docker run -it --entrypoint bash python:3.13
-  >> pip --version
+  > docker run -it --entrypoint bash python:3.13
+  > pip --version
 
 **Q2**
 db:5432
@@ -51,4 +51,4 @@ order by largest_tip desc;
 ```
 
 **Q7**
-terraform init, terraform apply -auto-approve, terraform destroy
+> terraform init, terraform apply -auto-approve, terraform destroy
