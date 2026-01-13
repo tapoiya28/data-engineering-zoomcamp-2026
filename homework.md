@@ -1,5 +1,5 @@
 **Q1**
-  > docker run -it --entrypoint bash python:3.13 `
+  > docker run -it --entrypoint bash python:3.13 \
   > pip --version
 
 **Q2**
