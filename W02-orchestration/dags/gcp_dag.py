@@ -12,7 +12,7 @@ from ingest_taxi_gcp import *
 with DAG(
     dag_id="ny_taxi_gcp_test_dag",
     start_date=datetime(2024, 1, 1),
-    schedule=None,
+    schedule= '0 9 1 * *',
     catchup=False,
 ) as dag:
     

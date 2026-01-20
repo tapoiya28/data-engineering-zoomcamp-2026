@@ -18,10 +18,10 @@ DATASET_ID = 'ny_taxi'
 BUCKET_NAME = 'ny-taxi-data-lake'
 
 def extract_yellow():
-    # context = get_current_context()
-    # data_start = context["data_interval_start"]
-    year = 2021
-    month = 1
+    context = get_current_context()
+    data_start = context["data_interval_start"]
+    year = data_start.year
+    month = data_start.month
 
     # read csv
     filename = f'yellow_tripdata_{year}-{month:02}.csv.gz'
@@ -49,10 +49,10 @@ def extract_yellow():
                 
 
 def extract_green():
-    # context = get_current_context()
-    # data_start = context["data_interval_start"]
-    year = 2021
-    month = 1
+    context = get_current_context()
+    data_start = context["data_interval_start"]
+    year = data_start.year
+    month = data_start.month
 
     # read csv
     filename = f'green_tripdata_{year}-{month:02}.csv.gz'
