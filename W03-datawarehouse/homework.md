@@ -49,14 +49,14 @@ WHERE tpep_dropoff_datetime BETWEEN '2024-03-01' AND '2024-03-15';
 ```
 310.24 MB for non-partitioned table and 26.84 MB for the partitioned table 
 
-**Q7** 
-GCP Bucket \
+**Q7** \
+GCP Bucket 
 
-**Q8** 
-False \
+**Q8** \ 
+False 
 
-**Q9** 
-0B  \
+**Q9** \
+0B  
 - Because bigquery store the metadata of table, including the number of rows of table. When estimate the query, GQ use the metadata instead of scanning the actual data.
 
 
