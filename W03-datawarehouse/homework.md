@@ -52,7 +52,7 @@ WHERE tpep_dropoff_datetime BETWEEN '2024-03-01' AND '2024-03-15';
 **Q7** \
 GCP Bucket 
 
-**Q8** \ 
+**Q8** \
 False 
 
 **Q9** \
