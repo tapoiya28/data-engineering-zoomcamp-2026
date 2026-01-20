@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime
 from airflow.sdk import get_current_context
 
-from ingest_taxi_gcp import *
+from w2_ingest_taxi_gcp import *
 
 with DAG(
     dag_id="ny_taxi_gcp_test_dag",
