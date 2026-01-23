@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "taxi_rides_ny"."dev"."taxi_zone_lookup" ("LocationID" integer,"Borough" text,"Zone" text,"service_zone" text)
+  ;
+    -- dbt seed --
+    
+          COPY "taxi_rides_ny"."dev"."taxi_zone_lookup" FROM 'd:\pj\data-engineering-zoomcamp-2026\W04-DBT\taxi_rides_ny\seeds\taxi_zone_lookup.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
