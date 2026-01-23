@@ -5,3 +5,6 @@ _pycache_/
 __pycache__/
 logs/
 keys/
+data/
+*.duckdb
+*.duckdb.tmp
