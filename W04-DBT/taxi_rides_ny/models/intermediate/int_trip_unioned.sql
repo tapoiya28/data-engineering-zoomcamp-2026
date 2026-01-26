@@ -24,7 +24,7 @@ with green_taxi as (
         improvement_surcharge,
         total_amount,
         payment_type,
-        congestion_surcharge 
+        'green' as service_type
     from {{ ref('stg_green_tripdata') }}
 ), yellow_taxi as (
     select 
@@ -50,7 +50,7 @@ with green_taxi as (
         improvement_surcharge,
         total_amount,
         payment_type,
-        congestion_surcharge 
+        'yellow' as service_type
     from {{ ref('stg_yellow_tripdata') }}
 ), trip_unioned as (
     select * from yellow_taxi
