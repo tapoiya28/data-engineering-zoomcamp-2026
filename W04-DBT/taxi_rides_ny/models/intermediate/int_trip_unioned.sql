@@ -1,13 +1,4 @@
-
-  
-    
-    
-
-    create  table
-      "taxi_rides_ny"."dev"."int_trip_unioned__dbt_tmp"
-  
-    as (
-      
+{{ config(materialized='table') }}
 
 with green_taxi as (
     select 
@@ -34,7 +25,7 @@ with green_taxi as (
         total_amount,
         payment_type,
         congestion_surcharge 
-    from "taxi_rides_ny"."dev"."stg_green_tripdata"
+    from {{ ref('stg_green_tripdata') }}
 ), yellow_taxi as (
     select 
         vendor_id,
@@ -60,7 +51,7 @@ with green_taxi as (
         total_amount,
         payment_type,
         congestion_surcharge 
-    from "taxi_rides_ny"."dev"."stg_yellow_tripdata"
+    from {{ ref('stg_yellow_tripdata') }}
 ), trip_unioned as (
     select * from yellow_taxi
     union all
@@ -68,6 +59,4 @@ with green_taxi as (
 )
 
 select * from trip_unioned
-    );
-  
-  
+

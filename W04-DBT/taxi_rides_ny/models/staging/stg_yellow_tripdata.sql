@@ -1,7 +1,4 @@
-
-  
-  create view "taxi_rides_ny"."dev"."stg_yellow_tripdata__dbt_tmp" as (
-    select 
+select 
     -- identifier
     CAST(VendorID AS INTEGER) as vendor_id,
     CAST(RatecodeID AS INTEGER) as rate_code_id,
@@ -28,6 +25,5 @@
     CAST(payment_type AS NUMERIC) as payment_type,
     CAST(congestion_surcharge AS NUMERIC) as congestion_surcharge
 
-from "taxi_rides_ny"."prod"."yellow_tripdata"
+from {{source('raw_data', 'yellow_tripdata')}}
 where vendor_id not null
-  );
