@@ -8,3 +8,4 @@ keys/
 data/
 *.duckdb
 *.duckdb.tmp
+.vscode/

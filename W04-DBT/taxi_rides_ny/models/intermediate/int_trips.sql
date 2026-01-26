@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with trip_unioned as (
     select *
     from {{ ref('int_trip_unioned') }}    
